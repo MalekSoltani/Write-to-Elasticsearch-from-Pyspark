@@ -26,6 +26,6 @@ inputData= sc.textFile("../path_to_data/data.csv")
 ES_ready_df = inputData.map(lambda x: x.split(",")).toDF(["id_1","field1" , "field2" , "field3"])
 ES_ready_df.show(3)
 #send To Elasticsearch
-ES_ready_df.write.format("org.elasticsearch.spark.sql").option('es.mapping.id', 'id_1').mode(append).save("detection/log")
+ES_ready_df.write.format("org.elasticsearch.spark.sql").option('es.mapping.id', 'id_1').mode(append).save("test/doc_type")
 #If you want to delete the index
 es.indices.delete(index='test', ignore=400)

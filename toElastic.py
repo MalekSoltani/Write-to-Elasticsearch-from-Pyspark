@@ -6,7 +6,7 @@
 #scala 2.11
 #> pip install elasticsearch
 #> pyspark --jars /usr/local/spark/jars/elasticsearch-spark-20_2.11.jars
-#******* Pay attention to the reqirements in the elasticsearch ES-Hadoop Configuration *******
+#******* Pay attention to the reqirements in the elasticsearch ES-Hadoop Documentation *******
 
 from pyspark import SparkContext
 from pyspark.sql import SQLContext
